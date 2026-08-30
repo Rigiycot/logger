@@ -1,3 +1,0 @@
-/home/rigiycot/Project/Cpp/Libraries/My/Logger/build/CMakeFiles/Logger.dir
-/home/rigiycot/Project/Cpp/Libraries/My/Logger/build/CMakeFiles/edit_cache.dir
-/home/rigiycot/Project/Cpp/Libraries/My/Logger/build/CMakeFiles/rebuild_cache.dir
