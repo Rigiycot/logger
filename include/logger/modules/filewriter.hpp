@@ -15,6 +15,8 @@ namespace lg
       void setDirectory(std::filesystem::path path);
       std::filesystem::path getDirectory() const;
 
+      FileWriter() = default;
+
     private:
       friend class Logger;
 

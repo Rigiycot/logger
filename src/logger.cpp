@@ -1,3 +1,4 @@
+#include "logger/modules/console.hpp"
 #include <logger/logger.hpp>
 
 #include <logger/types.hpp>
@@ -57,3 +58,7 @@ void lg::Logger::exec()
   if (this->console.isActive)
     this->console.process();
 }
+
+lg::Logger::Logger()
+  : console(this->config)
+{}

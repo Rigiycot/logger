@@ -27,6 +27,8 @@ namespace lg
       void process();
       void exec();
 
+      Logger();
+      
     private:
       std::vector<LogRecord> buffer;
 
