@@ -21,11 +21,11 @@ namespace
       case lg::LogLevel::ERROR:
         return "\033[38;5;124m";
       case lg::LogLevel::CRASH:
-        return "\033[38;5;165";
+        return "\033[38;5;165m";
     }
   }
 
-  std::string levelToName(lg::Config& config, lg::LogLevel level)
+  std::string levelToName(const lg::Config& config, lg::LogLevel level)
   {
     switch (level)
     {
