@@ -43,6 +43,10 @@ namespace
   }
 }
 
+lg::Console::Console(const lg::Config& config)
+  : config(config)
+{}
+
 void lg::Console::process()
 {
   for (const LogRecord& rec : this->buffer)
