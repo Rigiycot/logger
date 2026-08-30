@@ -19,9 +19,11 @@ namespace
       case lg::LogLevel::WARN:
         return "\033[38;5;220m";
       case lg::LogLevel::ERROR:
-        return "\033[38;5;124m";
+        return "\033[38;5;196m";
       case lg::LogLevel::CRASH:
         return "\033[38;5;165m";
+      default:
+        return {};
     }
   }
 
@@ -39,6 +41,8 @@ namespace
         return config.error;
       case lg::LogLevel::CRASH:
         return config.crash;
+      default:
+        return {};
     }
   }
 }
