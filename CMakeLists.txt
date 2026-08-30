@@ -9,6 +9,7 @@ add_library(
   src/config.cpp
   src/filewriter.cpp
   src/logger.cpp
+  src/console.cpp
 )
 
 target_include_directories(
