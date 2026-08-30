@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/build",
+  "command": "/usr/bin/c++  -I/home/rigiycot/Project/Cpp/Libraries/My/Logger/include -std=gnu++23 -o CMakeFiles/Logger.dir/src/config.cpp.o -c /home/rigiycot/Project/Cpp/Libraries/My/Logger/src/config.cpp",
+  "file": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/src/config.cpp",
+  "output": "CMakeFiles/Logger.dir/src/config.cpp.o"
+},
+{
+  "directory": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/build",
+  "command": "/usr/bin/c++  -I/home/rigiycot/Project/Cpp/Libraries/My/Logger/include -std=gnu++23 -o CMakeFiles/Logger.dir/src/filewriter.cpp.o -c /home/rigiycot/Project/Cpp/Libraries/My/Logger/src/filewriter.cpp",
+  "file": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/src/filewriter.cpp",
+  "output": "CMakeFiles/Logger.dir/src/filewriter.cpp.o"
+},
+{
+  "directory": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/build",
+  "command": "/usr/bin/c++  -I/home/rigiycot/Project/Cpp/Libraries/My/Logger/include -std=gnu++23 -o CMakeFiles/Logger.dir/src/logger.cpp.o -c /home/rigiycot/Project/Cpp/Libraries/My/Logger/src/logger.cpp",
+  "file": "/home/rigiycot/Project/Cpp/Libraries/My/Logger/src/logger.cpp",
+  "output": "CMakeFiles/Logger.dir/src/logger.cpp.o"
+}
+]
