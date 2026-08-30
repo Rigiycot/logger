@@ -28,7 +28,5 @@ namespace lg
       std::filesystem::path logs_dir = "logs";
 
       void getFromPath(const std::filesystem::path& path); // must be .conf file, but not role
-  
-      Config(Logger& logger);
   };
 }
