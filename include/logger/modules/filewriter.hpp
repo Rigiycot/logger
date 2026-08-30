@@ -1,17 +1,15 @@
 #pragma once
 
+#include <logger/types.hpp>
+
 #include <filesystem>
 #include <vector>
 
 namespace lg
 {
-  struct LogRecord;
-
   class FileWriter
   {
     public:
-      bool isActive = false;
-
       void process();
 
       void setDirectory(std::filesystem::path path);
@@ -20,6 +18,8 @@ namespace lg
     private:
       friend class Logger;
 
+      bool isActive = false;
+      
       std::vector<LogRecord> buffer;
       std::filesystem::path pathToLogsDir;
   };

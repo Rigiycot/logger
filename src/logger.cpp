@@ -1,4 +1,7 @@
 #include <logger/logger.hpp>
+
+#include <logger/types.hpp>
+
 #include <string>
 
 void lg::Logger::log(lg::LogLevel level, const std::string message)
@@ -47,4 +50,10 @@ void lg::Logger::process()
   }
 
   this->buffer.clear();
+}
+
+void lg::Logger::exec()
+{
+  if (this->console.isActive)
+    this->console.process();
 }

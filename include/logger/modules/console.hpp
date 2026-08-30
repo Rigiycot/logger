@@ -1,11 +1,12 @@
 #pragma once
 
+#include "logger/modules/config.hpp"
+#include <logger/types.hpp>
+
 #include <vector>
 
 namespace lg
 {
-  struct LogRecord;
-
   class Console
   {
     public:
@@ -14,8 +15,12 @@ namespace lg
       void activate();
       void stop();
 
+      Console(const Config& config);
+
     private:
       friend class Logger;
+
+      Config config;
 
       bool isActive = false;
 

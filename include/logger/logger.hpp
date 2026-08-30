@@ -4,26 +4,13 @@
 #include <logger/modules/filewriter.hpp>
 #include <logger/modules/console.hpp>
 
+#include <logger/types.hpp>
+
 #include <string>
 #include <vector>
 
 namespace lg 
 {
-  enum class LogLevel
-  {
-    DEBUG,
-    INFO,
-    WARN,
-    ERROR,
-    CRASH
-  };
-
-  struct LogRecord
-  {
-    LogLevel level;
-    std::string message;
-  };
-
   class Logger
   {
     public:
@@ -38,6 +25,7 @@ namespace lg
       void crash(const std::string& message);
 
       void process();
+      void exec();
 
     private:
       std::vector<LogRecord> buffer;
