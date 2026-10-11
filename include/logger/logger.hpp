@@ -18,6 +18,8 @@ namespace lg
       FileWriter filer;
       Console console;
 
+      void getConfig(std::filesystem::path& path);
+
       void debug(const std::string& message);
       void info (const std::string& message);
       void warn (const std::string& message);

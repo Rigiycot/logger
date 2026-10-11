@@ -5,6 +5,7 @@
 
 #include <vector>
 
+
 namespace lg
 {
   class Console
@@ -20,7 +21,7 @@ namespace lg
     private:
       friend class Logger;
 
-      Config config;
+      const Config& config;
 
       bool isActive = false;
 

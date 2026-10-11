@@ -18,11 +18,16 @@ namespace lg
     std::string error = "ERROR";
     std::string crash = "CRASH";
 
-    std::set<LogLevel> filter_filer;
     std::set<LogLevel> filter_console;
+    std::set<LogLevel> filter_filer;
 
     std::string left = "[";
     std::string right = "]";
+
+    bool console_show_time = false;
+    bool console_colorize = true;
+
+    bool filer_show_time = true;
 
     std::filesystem::path logs_dir = "logs";
 

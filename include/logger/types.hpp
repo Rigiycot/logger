@@ -1,5 +1,6 @@
 #pragma once
 
+#include <chrono>
 #include <string>
 
 namespace lg
@@ -16,6 +17,7 @@ namespace lg
   struct LogRecord
   {
     LogLevel level;
+    std::chrono::time_point<std::chrono::system_clock> time;
     std::string message;
   };
 }

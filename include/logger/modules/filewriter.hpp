@@ -1,5 +1,6 @@
 #pragma once
 
+#include "logger/modules/config.hpp"
 #include <logger/types.hpp>
 
 #include <filesystem>
@@ -12,17 +13,22 @@ namespace lg
     public:
       void process();
 
-      void setDirectory(std::filesystem::path path);
+      void activate();
+      void stop();
+
+      void setDirectory(const std::filesystem::path& path);
       std::filesystem::path getDirectory() const;
 
-      FileWriter() = default;
+      FileWriter(const Config& config);
 
     private:
       friend class Logger;
 
+      const Config& config;
+
       bool isActive = false;
       
       std::vector<LogRecord> buffer;
-      std::filesystem::path pathToLogsDir;
+      std::filesystem::path pathToLogsDir = config.logs_dir;
   };
 }

@@ -1,13 +1,14 @@
-#include "logger/modules/console.hpp"
+#include <logger/modules/console.hpp>
 #include <logger/logger.hpp>
 
 #include <logger/types.hpp>
 
 #include <string>
+#include <chrono>
 
 void lg::Logger::log(lg::LogLevel level, const std::string message)
 {
-  this->buffer.push_back({level, message});
+  this->buffer.push_back(LogRecord(level, std::chrono::system_clock::now(), message));
 }
 
 void lg::Logger::debug(const std::string& message)
@@ -57,8 +58,16 @@ void lg::Logger::exec()
 {
   if (this->console.isActive)
     this->console.process();
+
+  if (this->filer.isActive)
+    this->filer.process();
+}
+
+void lg::Logger::getConfig(std::filesystem::path &path)
+{
+  config.getFromPath(path);
 }
 
 lg::Logger::Logger()
-  : console(this->config)
+  : filer(this->config), console(this->config)
 {}
