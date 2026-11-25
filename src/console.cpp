@@ -13,7 +13,7 @@ namespace
     switch (level)
     {
       case lg::LogLevel::DEBUG:
-        return "\033[38;5;17m";
+        return "\033[38;2;0;255;160m";
       case lg::LogLevel::INFO:
         return "\033[38;5;255m";
       case lg::LogLevel::WARN:
